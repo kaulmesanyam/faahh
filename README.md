@@ -13,10 +13,9 @@ This script hooks into those functions to play your custom audio file (using App
 We've provided a simple installer script to set everything up automatically. 
 
 1. Open your terminal and navigate to the folder where you saved this project.
-2. Make the installer executable (if it isn't already) and run it:
+2. Run the installer via `make`:
 ```bash
-chmod +x install.sh
-./install.sh
+make faahh
 ```
 
 The script will automatically configure the audio path and add the necessary setup to your shell configuration file (`~/.zshrc` or `~/.bash_profile`).
