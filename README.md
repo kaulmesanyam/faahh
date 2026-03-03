@@ -36,7 +36,7 @@ You can control Faahh and switch between available audio files using the `faahh`
 faahh --stop       # Disables the audio playing on error
 faahh --start      # Re-enables the audio playing on error
 faahh --list       # Lists all available .mp3 files in the audio folder
-faahh --bkl.mp3    # Switches to the 'bkl.mp3' audio file (or any other .mp3 in the audio folder)
+faahh --filename.mp3    # Switches to the 'filename.mp3' audio file (or any other .mp3 in the audio folder)
 ```
 
 To add new sounds in the future, simply drop additional `.mp3` files into the `audio/` folder — they will automatically appear in `faahh --list` and can be selected with the `faahh --<filename>.mp3` command.
