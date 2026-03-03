@@ -1,6 +1,6 @@
 # Faahh
 
-This project is a fun, lightweight bash/zsh script for macOS that plays an audio file (from the `audio/` folder, e.g. `fahhhhh.mp3`) whenever you enter an invalid command in your terminal. 
+This project is a fun, lightweight bash/zsh script for macOS that plays an audio file (from the `audio/` folder, e.g. `fah.mp3`) whenever you enter an invalid command in your terminal. 
 
 ## How it works
 
@@ -13,7 +13,7 @@ This script hooks into those functions to play your custom audio file (using App
 We've provided a simple installer script to set everything up automatically. 
 
 1. Open your terminal and navigate to the folder where you saved this project.
-2. Place your `.mp3` files in the `audio/` folder in the project (for example `audio/fahhhhh.mp3`, `audio/bkl.mp3`, etc.).
+2. Place your `.mp3` files in the `audio/` folder in the project (for example `audio/fah.mp3`, `audio/bkl.mp3`, etc.).
 3. Run the installer via `make`:
 ```bash
 make faahh
