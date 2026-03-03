@@ -10,22 +10,29 @@ This script hooks into those functions to play your custom audio file (using App
 
 ## Installation
 
-To make this active in your terminal every time you open it, you need to `source` this script in your shell configuration file.
+We've provided a simple installer script to set everything up automatically. 
 
-### For Zsh (Default on newer Macs)
-Open your terminal and run:
+1. Open your terminal and navigate to the folder where you saved this project.
+2. Make the installer executable (if it isn't already) and run it:
 ```bash
-echo 'source <path to project>/faahh/faahh.sh' >> ~/.zshrc
-source ~/.zshrc
+chmod +x install.sh
+./install.sh
 ```
 
-### For Bash
-Open your terminal and run:
-```bash
-echo 'source <path to project>/faahh/faahh.sh' >> ~/.bash_profile
-source ~/.bash_profile
-```
+The script will automatically configure the audio path and add the necessary setup to your shell configuration file (`~/.zshrc` or `~/.bash_profile`).
+
+3. Restart your terminal, or reload your configuration as prompted by the installer.
+
 
 ## Usage
 
 Once installed, simply type a random invalid command like `asdfghjkl` or `sudo make me a sandwich` in your terminal. You should see the standard "command not found" error message and hear the audio play in the background!
+
+### Controlling Playback
+
+You can easily enable or disable the audio playback at any time by using the `faahh` command:
+
+```bash
+faahh --stop   # Disables the audio playing on error
+faahh --start  # Re-enables the audio playing on error
+```
