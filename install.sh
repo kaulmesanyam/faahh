@@ -5,18 +5,25 @@ echo "Installing Faahh..."
 # Get the directory where this script is located
 INSTALL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 SCRIPT_PATH="$INSTALL_DIR/faahh.sh"
-AUDIO_PATH="$INSTALL_DIR/fahhhhh.mp3"
+AUDIO_DIR="$INSTALL_DIR/audio"
 
-# Check if the audio file exists
-if [ ! -f "$AUDIO_PATH" ]; then
-    echo "Error: Audio file not found at $AUDIO_PATH"
-    echo "Please make sure fahhhhh.mp3 is in the same directory as this installer."
+echo "Checking audio directory at $AUDIO_DIR..."
+
+# Ensure audio directory exists
+if [ ! -d "$AUDIO_DIR" ]; then
+    echo "Error: Audio directory not found at $AUDIO_DIR"
+    echo "Please make sure the 'audio' folder exists in the project and contains your .mp3 files."
     exit 1
 fi
 
-# Update the audio path in faahh.sh automatically
-echo "Configuring faahh.sh with absolute paths..."
-sed -i '' "s|AUDIO_FILE=.*|AUDIO_FILE=\"$AUDIO_PATH\"|" "$SCRIPT_PATH"
+# Ensure at least one .mp3 exists in the audio directory
+if ! ls "$AUDIO_DIR"/*.mp3 >/dev/null 2>&1; then
+    echo "Error: No .mp3 files found in $AUDIO_DIR"
+    echo "Please add at least one .mp3 file (e.g. fahhhhh.mp3) to the 'audio' folder and re-run the installer."
+    exit 1
+fi
+
+echo "Audio directory verified at $AUDIO_DIR"
 
 echo "Adding Faahh to your shell configuration..."
 
