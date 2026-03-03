@@ -16,7 +16,7 @@ fi
 AUDIO_DIR="$_FAAHH_BASE_DIR/audio"
 
 # Default audio file name (must exist in AUDIO_DIR)
-DEFAULT_AUDIO_NAME="fahhhhh.mp3"
+DEFAULT_AUDIO_NAME="fah.mp3"
 
 # Flag to control if faahh is enabled (1 = enabled, 0 = disabled)
 export FAAHH_ENABLED=1
