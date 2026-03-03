@@ -23,7 +23,7 @@ echo "Adding Faahh to your shell configuration..."
 # Add to Zsh configuration if it exists
 if [ -f "$HOME/.zshrc" ]; then
     if ! grep -q "$SCRIPT_PATH" "$HOME/.zshrc"; then
-        echo "echo 'source \"$SCRIPT_PATH\"' >> ~/.zshrc" >> "$HOME/.zshrc"
+        echo "source \"$SCRIPT_PATH\"" >> "$HOME/.zshrc"
         echo "Added to ~/.zshrc"
     else
         echo "Faahh is already installed in ~/.zshrc"
@@ -33,14 +33,14 @@ fi
 # Add to Bash configuration if it exists
 if [ -f "$HOME/.bash_profile" ]; then
     if ! grep -q "$SCRIPT_PATH" "$HOME/.bash_profile"; then
-        echo "echo 'source \"$SCRIPT_PATH\"' >> ~/.bash_profile" >> "$HOME/.bash_profile"
+        echo "source \"$SCRIPT_PATH\"" >> "$HOME/.bash_profile"
         echo "Added to ~/.bash_profile"
     else
         echo "Faahh is already installed in ~/.bash_profile"
     fi
 elif [ -f "$HOME/.bashrc" ]; then
     if ! grep -q "$SCRIPT_PATH" "$HOME/.bashrc"; then
-        echo "echo 'source \"$SCRIPT_PATH\"' >> ~/.bashrc" >> "$HOME/.bashrc"
+        echo "source \"$SCRIPT_PATH\"" >> "$HOME/.bashrc"
         echo "Added to ~/.bashrc"
     else
         echo "Faahh is already installed in ~/.bashrc"
